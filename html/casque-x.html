@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VR Shop | Casque X</title>
+        <link rel="stylesheet" href="/css/style-produit.css" />
+        <!-- logo -->
+        <link rel="icon" type="image/png" href="/assets/images/logo.jpg" />
+        <!-- <link rel="stylesheet" href="/styles.css" /> -->
+        <!--FONTAWESOME-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo-cart-toggle-flex-container">
+                    <div class="logo">
+                        <img src="/assets/images/logo.jpg" alt="logo" />
+                        <h2 class="logo-text">VR Shop</h2>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-shopping"></i>
+                    </div>
+                    <div class="toggle">
+                        <i class="fas fa-bars open"></i>
+                        <i class="fas fa-times close"></i>
+                    </div>
+                </div>
+               
+                <div class="menu-main-container-to-hide">
+                    <ul class="menu">
+                        <li><a href="index.html" class="active">Accueil</a></li>
+                        <li><a href="/html/contact.html">Contact</a></li>
+                        <li><a href="/html/magasin.html">Magasin</a></li>
+                        <li>
+                            <div class="search-bar-flex-container">
+                                <input type="text" placeholder="Rechercher" />
+                                <!--Grâce à JS, le label ci-dessous n'apparaît pas dans le menu-->
+                                <!--Il est obligatoire dans le code sinon le test WAVE marque une erreur-->
+                                <!--Selon les normes W3C, pas de select sans label-->
+                                <label for="product-select" id="product-select-label">Choisissez un produit :</label>
+                                <select name="products" id="product-select">
+                                    <option value="">Filtrer</option>
+                                    <option value="casque" selected>Casques</option>
+                                    <option value="accessoire">Accessoires</option>
+                                </select>
+                                <button>
+                                    Rechercher<i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cart-desktop">
+                                <i class="fas fa-cart-shopping"></i>
+                            </div>
+                        </li>
+                        <li><button class="btnmenu">Login</button></li>
+                        <li><button class="btnmenu btn">S'inscrire</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="product-flex-container">
+                <div class="name-and-image-flex-container">
+                    <div class="name-product-flex-container">
+                        <h1>Casque X</h1>
+                        <h2>250.00 €</h2>
+                    </div>
+                    <div class="image-product-flex-container">
+                        <img
+                            src="https://images.unsplash.com/photo-1545579833-0e15a2cdb26b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            alt="casque X"
+                        />
+                    </div>
+                </div>
+                <div class="text-product-flex-container">
+                    <h3>Spécifications techniques</h3>
+                    <p>Lentilles brevetées</p>
+                    <p>Visuel : 18px par degré</p>
+                    <p>Design moderne</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Placeat, pariatur corrupti vitae quasi illo
+                        voluptatem facere beatae et fugit in illum inventore
+                        explicabo odit expedita nemo nulla at. Reiciendis,
+                        cupiditate.
+                    </p>
+                    <button>Ajouter au panier 
+                        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+            </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-flex-container">
+                <div class="social-media">
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+        
+                <!-- crml : copyright et mentions légales -->
+                <div class="crml">
+                    <div class="copyright">
+                        <p>© VR SHOP - 2023</p>
+                    </div>
+                    <div class="mention_legales">
+                        <p>Mention légales</p>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+    </body>
+    <script type="text/javascript" src="/nav_bar.js"></script>
+</html>

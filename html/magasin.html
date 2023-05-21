@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VR Shop | Magasin</title>
+        <link rel="stylesheet" href="/css/style-magasin.css" />
+        <!-- logo -->
+        <link rel="icon" type="image/png" href="/assets/images/logo.jpg" />
+        <!-- <link rel="stylesheet" href="/styles.css" /> -->
+        <!--FONTAWESOME-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo-cart-toggle-flex-container">
+                    <div class="logo">
+                        <img src="/assets/images/logo.jpg" alt="logo" />
+                        <h2 class="logo-text">VR Shop</h2>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-shopping"></i>
+                    </div>
+                    <div class="toggle">
+                        <i class="fas fa-bars open"></i>
+                        <i class="fas fa-times close"></i>
+                    </div>
+                </div>
+               
+                <div class="menu-main-container-to-hide">
+                    <ul class="menu">
+                        <li><a href="index.html" class="active">Accueil</a></li>
+                        <li><a href="/html/contact.html">Contact</a></li>
+                        <li><a href="/html/magasin.html">Magasin</a></li>
+                        <li>
+                            <div class="search-bar-flex-container">
+                                <input type="text" placeholder="Rechercher" />
+                                <!--Grâce à JS, le label ci-dessous n'apparaît pas dans le menu-->
+                                <!--Il est obligatoire dans le code sinon le test WAVE marque une erreur-->
+                                <!--Selon les normes W3C, pas de select sans label-->
+                                <label for="product-select" id="product-select-label">Choisissez un produit :</label>
+                                <select name="products" id="product-select">
+                                    <option value="">Filtrer</option>
+                                    <option value="casque" selected>Casques</option>
+                                    <option value="accessoire">Accessoires</option>
+                                </select>
+                                <button>
+                                    Rechercher<i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cart-desktop">
+                                <i class="fas fa-cart-shopping"></i>
+                            </div>
+                        </li>
+                        <li><button class="btnmenu">Login</button></li>
+                        <li><button class="btnmenu btn">S'inscrire</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--Breadcrumb-->
+        <ul class="breadcrumb">
+            <li><a href="#">Accueil</a></li>
+            <li>Magasin</li>
+        </ul>
+        <main>
+            <div class="main-container">
+                <div class="main-tri-flex-container">
+                    <label for="selection">Tri</label>
+                    <select name="selection" id="selection">
+                        <option value="">Par prix</option>
+                        <option value="">Par marque</option>
+                    </select>
+                    <!--Colonne Tri-->
+                    <div class="tri-flex-container">
+                        <div class="filter-by-price">
+                            <p>Trier par prix</p>
+                            <div class="range">
+                                <div class="range-slider">
+                                    <span class="range-selected"></span>
+                                </div>
+                                <div class="slider-container">
+                                    <div class="range-input">
+                                        <label for="min" id="min-label">Min</label>
+                                        <input
+                                            type="range"
+                                            class="min"
+                                            min="0"
+                                            max="1000"
+                                            value="200"
+                                            class="slider"
+                                            id="price-min"
+                                            step="20"
+                                            name="min"
+                                        />
+                                        <label for="max" id="max-label">Max</label>
+                                        <input
+                                            type="range"
+                                            class="max"
+                                            min="0"
+                                            max="1000"
+                                            value="800"
+                                            class="slider"
+                                            id="price-max"
+                                            step="20"
+                                            name="max"
+                                        />
+                                    </div>
+                                    <div
+                                        class="price-flex-container range-price"
+                                    >
+                                        <input
+                                            type="number"
+                                            name="min"
+                                            id="min"
+                                            placeholder="Min"
+                                        />
+                                        <input
+                                            type="number"
+                                            name="max"
+                                            id="max"
+                                            placeholder="Max"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-by-mark">
+                            <p>Marques</p>
+                            <div class="mark">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="htc" />
+                                    <label for="htc">HTC Vive</label>
+                                </div>
+                                <div class="span-flex-container">
+                                    <span class="number">11</span>
+                                </div>
+                            </div>
+                            <div class="mark">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="oculus" />
+                                    <label for="oculus">Oculus</label>
+                                </div>
+                                <div class="span-flex-container">
+                                    <span class="number">123</span>
+                                </div>
+                            </div>
+                            <div class="mark">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="playstation" />
+                                    <label for="playstation"
+                                        >Playstation VR</label
+                                    >
+                                </div>
+                                <div class="span-flex-container">
+                                    <span class="number">12</span>
+                                </div>
+                            </div>
+                            <div class="mark">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="primax" />
+                                    <label for="primax">Primax VR</label>
+                                </div>
+                                <div class="span-flex-container">
+                                    <span class="number">04</span>
+                                </div>
+                            </div>
+                            <div class="mark">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="totem" />
+                                    <label for="totem">Totem</label>
+                                </div>
+                                <div class="span-flex-container">
+                                    <span class="number">22</span>
+                                </div>
+                            </div>
+                            <div class="mark">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="valve" />
+                                    <label for="valve">Valve Index</label>
+                                </div>
+                                <div class="span-flex-container">
+                                    <span class="number">123</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END .tri-flex-container-->
+                </div>
+                <!--END .main-tri-flex-container-->
+
+                <section class="main-card-flex-container">
+                    <!-- <h1>Nos produits</h1> -->
+                    <!--CARD 1-->
+                    <div class="card-flex-container">
+                        <div class="image-container">
+                            <div class="sale-container">
+                                <span>Sale</span>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img
+                                src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                alt="oculus"
+                            />
+                        </div>
+                        <div class="text-container">
+                            <h2>Casque OCULUS</h2>
+                            <p>999.99 €</p>
+                            <div class="circle-container">
+                                <span class="blue-circle"></span>
+                                <span class="green-circle"></span>
+                                <span class="orange-circle"></span>
+                                <span class="black-circle"></span>
+                            </div>
+                            <div class="span-mark-container">
+                                <span>OCULUS</span>
+                            </div>
+                            <a href="/html/oculus.html"
+                                ><button>En savoir plus ...</button></a
+                            >
+                        </div>
+                    </div>
+
+                    <!--CARD 2-->
+                    <div class="card-flex-container">
+                        <div class="image-container">
+                            <div class="sale-container">
+                                <span>Sale</span>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img
+                                src="https://images.unsplash.com/photo-1545579833-0e15a2cdb26b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                alt="casque-x"
+                            />
+                        </div>
+                        <div class="text-container">
+                            <h2>Casque X</h2>
+                            <p>250.00 €</p>
+                            <div class="circle-container">
+                                <span class="blue-circle"></span>
+                                <span class="green-circle"></span>
+                                <span class="orange-circle"></span>
+                                <span class="black-circle"></span>
+                            </div>
+                            <div class="span-mark-container">
+                                <span>Primax</span>
+                            </div>
+                            <a href="/html/casque-x.html"
+                                ><button>En savoir plus ...</button></a
+                            >
+                        </div>
+                    </div>
+
+                    <!--CARD 3-->
+                    <div class="card-flex-container">
+                        <div class="image-container">
+                            <div class="sale-container">
+                                <span>Sale</span>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img
+                                src="https://images.unsplash.com/photo-1622979135240-caa6648190b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                alt="oculus"
+                            />
+                        </div>
+                        <div class="text-container">
+                            <h2>Manette</h2>
+                            <p>70.00 €</p>
+                            <div class="circle-container">
+                                <span class="blue-circle"></span>
+                                <span class="green-circle"></span>
+                                <span class="orange-circle"></span>
+                                <span class="black-circle"></span>
+                            </div>
+                            <div class="span-mark-container">
+                                <span>playstation VR</span>
+                            </div>
+                            <a href="/html/manette.html"
+                                ><button>En savoir plus ...</button></a
+                            >
+                        </div>
+                    </div>
+
+                    <!--CARD 4-->
+                    <div class="card-flex-container">
+                        <div class="image-container">
+                            <div class="sale-container">
+                                <span>Sale</span>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img
+                                src="https://images.unsplash.com/photo-1562177613-f2669eea104f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                alt="oreilletes"
+                            />
+                        </div>
+                        <div class="text-container">
+                            <h2>Oreillettes</h2>
+                            <p>50.00 €</p>
+                            <div class="circle-container">
+                                <span class="blue-circle"></span>
+                                <span class="green-circle"></span>
+                                <span class="orange-circle"></span>
+                                <span class="black-circle"></span>
+                            </div>
+                            <div class="span-mark-container">
+                                <span>HTC</span>
+                            </div>
+                            <a href="/html/oreillettes.html"
+                                ><button>En savoir plus ...</button></a
+                            >
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="social-media">
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <!-- crml : copyright et mentions légales -->
+            <div class="crml">
+                <div class="copyright">
+                    <p>© VR SHOP - 2023</p>
+                </div>
+                <div class="mention_legales">
+                    <p>Mention légales</p>
+                </div>
+            </div>
+        </footer>
+        <script src="/js/range-price-slider.js"></script>
+    </body>
+    <script type="text/javascript" src="/nav_bar.js"></script>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- logo -->
+        <link rel="icon" type="image/png" href="/assets/images/logo.jpg" />
+        <!--FONTAWESOME-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="/css/contact.css" />
+        <title>VR Shop | Contact</title>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <header>
+            <nav>
+                <div class="logo-cart-toggle-flex-container">
+                    <div class="logo">
+                        <img src="/assets/images/logo.jpg" alt="logo" />
+                        <h2 class="logo-text">VR Shop</h2>
+                    </div>
+                    <div class="cart">
+                        <i class="fas fa-cart-shopping"></i>
+                    </div>
+                    <div class="toggle">
+                        <i class="fas fa-bars open"></i>
+                        <i class="fas fa-times close"></i>
+                    </div>
+                </div>
+               
+                <div class="menu-main-container-to-hide">
+                    <ul class="menu">
+                        <li><a href="index.html" class="active">Accueil</a></li>
+                        <li><a href="/html/contact.html">Contact</a></li>
+                        <li><a href="/html/magasin.html">Magasin</a></li>
+                        <li>
+                            <div class="search-bar-flex-container">
+                                <input type="text" placeholder="Rechercher" />
+                                <!--Grâce à JS, le label ci-dessous n'apparaît pas dans le menu-->
+                                <!--Il est obligatoire dans le code sinon le test WAVE marque une erreur-->
+                                <!--Selon les normes W3C, pas de select sans label-->
+                                <label for="product-select" id="product-select-label">Choisissez un produit :</label>
+                                <select name="products" id="product-select">
+                                    <option value="">Filtrer</option>
+                                    <option value="casque" selected>Casques</option>
+                                    <option value="accessoire">Accessoires</option>
+                                </select>
+                                <button>
+                                    Rechercher<i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cart-desktop">
+                                <i class="fas fa-cart-shopping"></i>
+                            </div>
+                        </li>
+                        <li><button class="btnmenu">Login</button></li>
+                        <li><button class="btnmenu btn">S'inscrire</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- FORM -->
+        <main>
+            <section class="form">
+                <div class="form-header">
+                    <img src="/assets/images/cover.png" alt="Contact" />
+                </div>
+                <form method="get" action="/html/contact.html">
+                    <h1>Contactez-nous !</h1>
+
+                    <div class="item">
+                        <label for="nom">Nom *</label>
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="Nom de famille"
+                        />
+                    </div>
+
+                    <div class="item">
+                        <label for="prenom">Prenom *</label>
+                        <input
+                            type="text"
+                            id="prenom"
+                            name="prenom"
+                            placeholder="Prenom"
+                        />
+                    </div>
+
+                    <div class="item">
+                        <label for="email">Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemple@gmail.com"
+                        />
+                    </div>
+
+                    <div class="item">
+                        <label for="why">Sujet *</label>
+                        <select name="why" id="why">
+                            <option value="SAV">Service après vente</option>
+                            <option value="info">
+                                Demande de renseignement
+                            </option>
+                            <option value="another">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="item">
+                        <label for="ask">Votre message *</label>
+                        <textarea
+                            name="ask"
+                            id="ask"
+                            placeholder="Message"
+                            rows="10"
+                            cols="30"
+                        ></textarea>
+                    </div>
+
+                    <input id="button" type="submit" value="Envoyez !" />
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="social-media">
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <!-- crml : copyright et mentions légales -->
+            <div class="crml">
+                <div class="copyright">
+                    <p>© VR SHOP - 2023</p>
+                </div>
+                <div class="mention_legales">
+                    <p>Mention légales</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script type="text/javascript" src="/nav_bar.js"></script>
+</html>
